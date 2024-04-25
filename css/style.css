@@ -22,7 +22,7 @@
     z-index: 100;
     padding: 25px;
     margin:auto;
-    
+    border-radius: 15px;
 }
 .header a:hover{
     font-weight: bold;
@@ -64,7 +64,7 @@
     padding-right: 100px;
     text-transform: uppercase;
     font-family: 'Times New Roman', Times, serif;
-    font: size 20px; ;
+    font-size: 30px;
 }
 
 .footer div div h3{
@@ -98,7 +98,7 @@
     background-size: cover;
     display: flex;
     justify-content: center;
-    
+    border-radius: 15px;
     width: 100%;
     margin:0;
     
@@ -244,55 +244,89 @@ img {
     border-radius: 15px;
 }
 
-@media(max-width:850px){
-    .grid-container-dp{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-
-    }
-}
-
-@media(max-width:850px){
-    .ap-img{
-        display: flex;
-    background-image: url(../img/Balanza\ Justicia\ AP.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height:auto;
-    position: static;
-    margin-top: 5px;
-    border-radius: 15px;
-    }
-
-}
-
-@media(max-width:850px){
-    .ap-text h1{
-        flex-direction: column;
-        justify-content: center;
-    }
-
+@media (max-width:1261px){
     
-}
-
-@media(max-width:850px){
-    .text-design{
-        flex-direction: column;
-        justify-content: center;
+    .icons a img{
+        display: none;
     }
-
-    
-}
-@media (max-width:850){
-    img {
-
-        height: 200px;
-        width: 400px;
-        object-fit: cover;
+    .footer div h2{
+        padding-right: 80px;
+        font-size: 30px;
         
-        }
+    }
+    .footer div div ul{
+        padding-right: 20px;
 
+    } 
 
 }
+@media (max-width:1120px){
+    .footer div h2{
+        padding-right: 30px;
+        padding-left: 15px;
+        font-size: 25px;
+
+    }
+    .footer div div h3{
+        font-size: 20px;
+    }
+    .footer div div ul{
+        padding-right: 20px;
+
+    } 
+}
+
+
+@media (max-width: 500px) {
+    .grid-practicas{
+        display: grid;
+        width: 100vw;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    .header{
+        grid-area: header;
+        width: 100vw;
+    }
+    .ap-text h1 {
+        width: 100vw;
+    }
+    .ap-img{
+        width: 100vw;
+    }
+    .main{
+        grid-area: main;
+        width: auto;
+    }
+    .text-design p{
+        font-size: 10px;
+        color: black;
+    }
+    .grid-container-dp{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows:repeat(auto-fill);
+        row-gap: 10px;
+        
+        margin-top: 20px;
+        overflow: hidden;
+        border-radius: 15px;
+    }
+    img{
+        width: 200px;
+    }
+
+    .footer{
+        grid-area: footer;
+    width: auto;
+    }
+    .icons{
+        display: none;
+    }
+}
+
+
